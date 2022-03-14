@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <title>Register</title>
+</head>
+<body class="main">
+    <div class="container" onmouseover="enablebtn()">
+        <form action="/auth/Register" method="POST">
+            <h1>Sign Up</h1>
+            <div class="form-field error success">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="Enter your Name">
+                <small id="nameerror">*</small>
+            </div>
+
+            <div class="form-field error success">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" autocomplete="off" placeholder="Enter your Email Adderss" onclick="usernamecheck()">
+                <small id="emailerror">*</small>
+            </div>
+
+            <div class="form-field error success">
+                <label for="PhoneNumber">PhoneNumber:</label>
+                <input type="text" name="PhoneNumber" id="PhoneNumber" autocomplete="off" placeholder="Enter your PhoneNumber" onclick="emailcheck()">
+                <small id="phonenumbererror">*</small>
+            </div>
+
+            <div class="form-field error success">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" autocomplete="off" placeholder="Enter Password" onclick="phonenumbercheck()">
+                <small id="passworderror">*</small>
+            </div>
+
+
+            <div class="form-field error success">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off" placeholder="Enter Confirm Password" onclick="passwordcheck()">
+                <small id="confirmpassword">*</small>
+            </div>
+
+            <div class="form-field">
+                <button class="btn" id="btn" type="submit" disabled>Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="~/Scripts/javascript.js"></script>
+    <script src="~/Scripts/script.js"></script>
+
+
+</body>
+</html>
+

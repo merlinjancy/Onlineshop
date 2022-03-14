@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -Online Shop</title>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="header1">
+            <a href="@Url.Action("Index","Home")" class="logo">VegFru</a>
+
+
+
+            <!-- search box -->
+            <div class="aa-search-box  icons">
+                <form action="@Url.Action("Search","Product")" method="get">
+                    <input type="text" name="product" id="searchTxtBox" placeholder="Search product here . . . ">
+                    <button type="submit"><span class="fa fa-search"></span></button>
+                </form>
+            </div>
+            <!-- / search box -->
+        </div>
+
+
+
+
+        <div class="header2">
+            <div id="menuBar" class="fas fa-bars"></div>
+
+            <nav class="navBar">
+                <a href="@Url.Action("Index","Home")">Home</a>
+                <a href="@Url.Action("About","Home")">About Us</a>
+                <a href="@Url.Action("Categories","Home")">Categories</a>
+                
+                <div class="btn-group dropend">
+                    <button type="button"  style="background-color:white; border: white;"  class="btn btn-secondary dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </button>
+                    <ul class="dropdown-menu" >
+                        <li><a class="dropdown-item" href="#">Organic Vegitables</a></li>
+                        <li><a class="dropdown-item" href="#">Organic Fruits</a></li>
+                        <li><a class="dropdown-item" href="#">Exotic Vegitables</a></li>
+                        <li><a class="dropdown-item" href="#">Exotic Fruits</a></li>
+                        <li><a class="dropdown-item" href="#">Micrograms & Sprouts</a></li>
+                        <li><a class="dropdown-item" href="#">Dry Fruits</a></li>
+
+                        <li><a class="dropdown-item" href="#"></a>Beverages</li>
+                        <li>
+                            <a class="dropdown-item" href="#"></a>
+                            <div class="btn-group dropend">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Beverages
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Fruit Juices & Drinks</a></li>
+                                    <li><a class="dropdown-item" href="#">Energy & SoftDrinks</a></li>
+
+                                </ul>
+                            </div>
+
+
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+            </nav>
+
+            <div class="icons">
+                <a><i class="fas fa-sign-in-alt"></i> @Html.ActionLink("Login", "Login", "Home")</a>
+
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <section class="footer" id="call4">
+        <div class="wrapper">
+            <div class="feature-box">
+                <i class="fas fa-truck"></i>
+                <div class="text">
+                    <h3>Free & Next Day Deliery</h3>
+                    <p>Lorem, ipsum dolor sit amet</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-shopping-basket"></i>
+                <div class="text">
+                    <h3>100% satisfaction guarantee</h3>
+                    <p>Lorem, ipsum dolor sit amet</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <i class="fas fa-tag"></i>
+                <div class="text">
+                    <h3>Great daily deals discount</h3>
+                    <p>Lorem, ipsum dolor sit amet</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="/images/logo1.png" alt="">
+                <div class="icons icons-1">
+                    <a href="#"><i class="fas fa-phone-alt"></i>+61 525 240 310</a>
+                    <a href="#"><i class="fas fa-mobile"></i>12345 6789,6578 24567</a>
+                    <a href="#"><i class="fas fa-envelop"></i>fruveg@gmail.com</a>
+                    <a href="#"><i class="fas fa-globe"></i>www.klbtheme.com</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Categories</h2>
+                <div class="icons">
+                    <a href="#">Organic Vegitables</a>
+                    <a href="#">Organic Fruits</a>
+                    <a href="#">Exotic Vegitables</a>
+                    <a href="#">Exotic Fruits</a>
+                    <a href="#">Micrograms & Sprouts</a>
+                    <a href="#">Dry Fruits</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>About Us</h2>
+                <div class="icons text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Dolorum autem iste neque voluptatem pariatur.
+                        Similique consequatur beatae corporis nesciunt mollitia
+                        blanditiis harum corrupti libero error! Incidunt quod
+                        reiciendis perferendis non?
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Dolorum autem iste neque voluptatem pariatur.
+                        Similique consequatur beatae corporis nesciunt mollitia
+                        blanditiis harum corrupti libero error! Incidunt quod
+                        reiciendis perferendis non?
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="~/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="vegfruModelStoreContainer" CdmEntityContainer="vegfruEntities1">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="vegfruModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="categories" ColumnName="categories" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="offer" ColumnName="offer" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="addedDate" ColumnName="addedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

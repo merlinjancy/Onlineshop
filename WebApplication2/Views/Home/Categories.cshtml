@@ -1,0 +1,777 @@
+﻿
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*<html>
+    <head>
+        <title></title>
+
+        <link href="~/Content/CustomerStyleSheet.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+
+        <div class="container-fluid mt-5 mb-5 " style="padding: 0px 100px;">
+            <div class="p-2 bg-white px-4 rounded">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="d-flex flex-row align-items-center filters"><span class="ml-2">All types</span><i class="fa fa-angle-down ml-1"></i></div>
+                    <div class="d-flex flex-row align-items-center filters mt-2">
+                        <div class="sub-cat" style="border-bottom: 2px solid blue;">
+                            <h6>Popular</h6>
+                        </div>
+                        <div class="sub-cat ml-2">
+                            <h6 class="text-muted">Low</h6>
+                        </div>
+                        <div class="sub-cat ml-2">
+                            <h6 class="text-muted">High</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center filters">
+                        <div class="d-flex flex-row align-items-center"><span class="ml-2">our price</span><i class="fa fa-angle-down ml-1"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 mt-2">
+                    <div class="p-4 bg-white rounded">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-between align-items-center mb-2">
+                                <span class="item px-2 rounded">New</span>
+                                <div><i class="fa fa-heart-o ml-2"></i></div>
+                            </div>
+                            <div class="mb-2 p-image"><img class="img-fluid img-responsive rounded" src="https://i.imgur.com/bV1xmG5.jpg" height="250"></div>
+                            <div class="text-center"><span class="p-name">Timpot sofa set</span></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                <div class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div class="buttons">
+                                    <div class="btn-group btn-group-sm" role="group"><button class="btn btn-outline-primary text-dark border-dark price" type="button">$60</button><button class="btn btn-outline-primary text-dark border-dark cart" type="button"><i class="fa fa-shopping-cart p-1"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 mt-2">
+                    <div class="p-4 bg-white rounded">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-between align-items-center mb-2">
+                                <span class="item px-2 rounded">New</span>
+                                <div><i class="fa fa-heart-o ml-2"></i></div>
+                            </div>
+                            <div class="mb-2 p-image"><img class="img-fluid img-responsive rounded" src="https://i.imgur.com/vgMi4nw.jpg" height="250"></div>
+                            <div class="text-center"><span class="p-name">Mithon sofa set</span></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                <div class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div class="buttons">
+                                    <div class="btn-group btn-group-sm" role="group"><button class="btn btn-outline-primary text-dark border-dark price" type="button">$70</button><button class="btn btn-outline-primary text-dark border-dark cart" type="button"><i class="fa fa-shopping-cart p-1"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 mt-2">
+                    <div class="p-4 bg-white rounded">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-between align-items-center mb-2">
+                                <span class="item px-2 rounded">New</span>
+                                <div><i class="fa fa-heart-o ml-2"></i></div>
+                            </div>
+                            <div class="mb-2 p-image"><img class="img-fluid img-responsive rounded" src="https://i.imgur.com/hRlGe10.jpg" height="250"></div>
+                            <div class="text-center"><span class="p-name">Migol sofa set</span></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                <div class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div class="buttons">
+                                    <div class="btn-group btn-group-sm" role="group"><button class="btn btn-outline-primary text-dark border-dark price" type="button">$80</button><button class="btn btn-outline-primary text-dark border-dark cart" type="button"><i class="fa fa-shopping-cart p-1"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12 col-lg-12"><img class="img-fluid img-responsive w-100 rounded" src="https://i.imgur.com/XZHajac.png"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 mt-2">
+                    <div class="p-4 bg-white rounded">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-between align-items-center mb-2">
+                                <span class="item px-2 rounded">New</span>
+                                <div><i class="fa fa-heart-o ml-2"></i></div>
+                            </div>
+                            <div class="mb-2 p-image"><img class="img-fluid img-responsive rounded" src="https://i.imgur.com/6qKAkNk.jpg" height="250"></div>
+                            <div class="text-center"><span class="p-name">Piply sofa set</span></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                <div class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div class="buttons">
+                                    <div class="btn-group btn-group-sm" role="group"><button class="btn btn-outline-primary text-dark border-dark price" type="button">$70</button><button class="btn btn-outline-primary text-dark border-dark cart" type="button"><i class="fa fa-shopping-cart p-1"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 mt-2">
+                    <div class="p-4 bg-white rounded">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-between align-items-center mb-2">
+                                <span class="item px-2 rounded">New</span>
+                                <div><i class="fa fa-heart-o ml-2"></i></div>
+                            </div>
+                            <div class="mb-2 p-image"><img class="img-fluid img-responsive rounded" src="https://i.imgur.com/R9Y4IG7.jpg" height="250"></div>
+                            <div class="text-center"><span class="p-name">Lusy sofa set</span></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                <div class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div class="buttons">
+                                    <div class="btn-group btn-group-sm" role="group"><button class="btn btn-outline-primary text-dark border-dark price" type="button">$90</button><button class="btn btn-outline-primary text-dark border-dark cart" type="button"><i class="fa fa-shopping-cart p-1"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 mt-2">
+                    <div class="p-4 bg-white rounded">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-between align-items-center mb-2">
+                                <span class="item px-2 rounded">New</span>
+                                <div><i class="fa fa-heart-o ml-2"></i></div>
+                            </div>
+                            <div class="mb-2 p-image"><img class="img-fluid img-responsive rounded" src="https://i.imgur.com/beeeLPf.jpg" height="250"></div>
+                            <div class="text-center"><span class="p-name">Tixon sofa set</span></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                <div class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div class="buttons">
+                                    <div class="btn-group btn-group-sm" role="group"><button class="btn btn-outline-primary text-dark border-dark price" type="button">$85</button><button class="btn btn-outline-primary text-dark border-dark cart" type="button"><i class="fa fa-shopping-cart p-1"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>*@
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+
+    <title>Veg & Fru</title>
+
+    <link rel="stylesheet" href="~/Content/StyleSheet1.css">
+    <link rel="stylesheet" href="/css/media.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    
+    <section class="product products">
+
+
+        <div class="products-layout container">
+            <div class="col-1-of-4">
+                <div>
+                    <div class="block-title">
+                        <h3>Category</h3>
+                    </div>
+
+                    <ul class="block-content">
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Shoes</span>
+                                <small>(10)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Bags</span>
+                                <small>(7)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span> Accessories</span>
+                                <small>(3)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Clothings</span>
+                                <small>(3)</small>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="block-title">
+                        <h3>Brands</h3>
+                    </div>
+
+                    <ul class="block-content">
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Gucci</span>
+                                <small>(10)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Burberry</span>
+                                <small>(7)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span> Accessories</span>
+                                <small>(3)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Valentino</span>
+                                <small>(3)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Dolce & Gabbana</span>
+                                <small>(3)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Hogan</span>
+                                <small>(3)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span>Moreschi</span>
+                                <small>(3)</small>
+                            </label>
+                        </li>
+
+                        <li>
+                            <label for="">
+                                <h1><link href="" /></h1>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3-of-4">
+                
+                <form action="">
+                    <div class="item">
+                        <label for="sort-by">Sort By</label>
+                        <select name="sort-by" id="sort-by">
+                            <option value="title" selected="selected">Name</option>
+                            <option value="number">Price</option>
+                            <option value="search_api_relevance">Relevance</option>
+                            <option value="created">Newness</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="order-by">Order</label>
+                        <select name="order-by" id="sort-by">
+                            <option value="ASC" selected="selected">ASC</option>
+                            <option value="DESC">DESC</option>
+                        </select>
+                    </div>
+                    <a href="">Apply</a>
+                </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="box-container">
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-01.jpg" alt="">
+                        <h3 class="gap">Capsicum - Green (0.25kg)</h3>
+                        <div class="price">₹40</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-02.jpg" alt="">
+                        <h3 class="gap">Mint Leaves (100gm)</h3>
+                        <div class="price">₹22</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-03.jpg" alt="">
+                        <h3 class="gap">Salad Cucumber - Green (0.25km)</h3>
+                        <div class="price">₹27</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-04.jpg" alt="">
+                        <h3 class="gap">Cabbage</h3>
+                        <div class="price">₹30</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-05.jpg" alt="">
+                        <h3 class="gap">Bringal Purple Stripe (0.50kg)</h3>
+                        <div class="price">₹53</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-06.jpg" alt="">
+                        <h3 class="gap">Potato (0.50kg)</h3>
+                        <div class="price">₹35</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-07.jpg" alt="">
+                        <h3 class="gap">Lemon (0.20kg)</h3>
+                        <div class="price">₹22</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-08.jpg" alt="">
+                        <h3 class="gap">Turnip (0.50kg)</h3>
+                        <div class="price">₹18</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                </div>
+
+                <div class="heading">
+                    <h2><a href="#">Organic Fruits</a></h2>
+                    <hr>
+                </div>
+                <div class="box-container">
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/product-12.jpg" alt="">
+                        <h3 class="gap">Strawberry</h3>
+                        <div class="price">₹230</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/product-13.jpg" alt="">
+                        <h3 class="gap">Watter Mellon</h3>
+                        <div class="price">₹30</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/product-11.webp" alt="">
+                        <h3 class="gap">Fresh Baby Orange - 1kg</h3>
+                        <div class="price">₹400</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/product-1.jpg" alt="">
+                        <h3 class="gap">Mango</h3>
+                        <div class="price">₹20</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="heading">
+                    <h2><a href="#">Exotic Vegitables</a></h2>
+                    <hr>
+                </div>
+                <div class="box-container">
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-09.jpg" alt="">
+                        <h3 class="gap">Strawberry</h3>
+                        <div class="price">₹230</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-10.jpg" alt="">
+                        <h3 class="gap">Watter Mellon</h3>
+                        <div class="price">₹30</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-14.jpg" alt="">
+                        <h3 class="gap">Watter Mellon</h3>
+                        <div class="price">₹30</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-12.jpg" alt="">
+                        <h3 class="gap">Fresh Baby Orange - 1kg</h3>
+                        <div class="price">₹400</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+                <div class="heading">
+                    <h2><a href="#">Exotic Fruits</a></h2>
+                    <hr>
+                </div>
+                <div class="box-container">
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-11.jpg" alt="">
+                        <h3 class="gap">Star Fruit</h3>
+                        <div class="price">₹230</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-13.jpg" alt="">
+                        <h3 class="gap">Acai</h3>
+                        <div class="price">₹30</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-16.jpg" alt="">
+                        <h3 class="gap">Durian</h3>
+                        <div class="price">₹30</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-15.jpg" alt="">
+                        <h3 class="gap">Mangosteen</h3>
+                        <div class="price">₹400</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+                </div>
+
+
+
+                <div class="heading">
+                    <h2><a href="#">Dry Fruits</a></h2>
+                    <hr>
+                </div>
+                <div class="box-container">
+
+                    <div class="card">
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-17.jpg" alt="">
+                        <h3 class="gap">Almond / Badam</h3>
+                        <div class="price">₹230</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-19.jpg" alt="">
+                        <h3 class="gap">Dried Dates</h3>
+                        <div class="price">₹30</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-18.jpg" alt="">
+                        <h3 class="gap">Dried Figs</h3>
+                        <div class="price">₹30</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="corner-box"><span></span></div>
+                        <img src="~/Content/images/shop-21.jpg" alt="">
+                        <h3 class="gap">Cashewnuts</h3>
+                        <div class="price">₹400</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <button type="button" class="btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+    
+</body>
+<script src=~/Scripts/script.js></script>
+</html>

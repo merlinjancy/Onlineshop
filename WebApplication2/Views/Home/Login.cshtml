@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+<body class="main">
+    <div class="container">
+        <form class="form">
+            <h1>Login</h1>
+            <div class="form-field error success">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" autocomplete="off" placeholder="Enter your Name" required>
+                <small></small>
+
+            </div>
+
+            <div class="form-field error success">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" autocomplete="off" placeholder="Enter Password" required>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <button class="btn" type="submit">Login</button>
+            </div>
+            <p>New User?</p><a> @Html.ActionLink("Sign Up", "Register", "Home")</a>
+        </form>
+    </div>
+
+
+
+    <script src="~/Scripts/script.js"></script>
+    <script src="~/Scripts/javascript.js"></script>
+
+</body>
+</html>
